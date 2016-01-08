@@ -9,12 +9,19 @@
 import UIKit
 import AFNetworking
 
-class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
+    var refreshControl: UIRefreshControl!
+    
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    
+    
     
     var movies: [NSDictionary]?
-    
+   let data = ["Suraj Sinha", "Vikas Sinha"]
+   // var filteredData: [String]!
     
     
 
@@ -23,6 +30,11 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+   //    filteredData = data
+        
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: "onRefresh", forControlEvents: UIControlEvents.ValueChanged)
+        tableView.insertSubview(refreshControl, atIndex: 0)
         
         // Do any additional setup after loading the view.
         
@@ -49,20 +61,28 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
                 }
         });
         task.resume()
-        
-        
-        
-        
-        
+
+    
         
     }
+    
 
+    
+    
+
+
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        
         
         if let movies = movies {
             
@@ -79,6 +99,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("MovieCell", forIndexPath: indexPath) as! MovieCell
         
         let movie = movies![indexPath.row]
@@ -91,7 +112,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         
         
-    
+        //cell.textLabel?.text = filteredData[indexPath.row]
         
         cell.titleLabel.text = title
         cell.overviewLabel.text = overview
@@ -105,8 +126,21 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         return cell
         
     }
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
+    }
     
-    
+    func onRefresh() {
+        delay(2, closure: {
+            self.refreshControl.endRefreshing()
+        })
+    }
+   
     /*
     // MARK: - Navigation
 
