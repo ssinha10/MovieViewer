@@ -31,7 +31,7 @@
                                         <rect key="frame" x="0.0" y="136" width="320" height="142"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TMZ-iZ-2Wb" id="vVc-6e-jFb">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="141.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="142"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2u-Xp-FX9">
@@ -62,12 +62,16 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="ujr-bn-yPz" secondAttribute="trailing" constant="-20" id="3Hn-xr-6Ou"/>
                             <constraint firstItem="7dD-Tr-WyF" firstAttribute="top" secondItem="ujr-bn-yPz" secondAttribute="bottom" id="7Qj-wf-UBT"/>
                             <constraint firstItem="ujr-bn-yPz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="ESM-1S-d25"/>
                             <constraint firstItem="ujr-bn-yPz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="I6p-yt-RnN"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="c0K-0e-P9g" appends="YES" id="Jmi-Na-Cru"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="All Movies" id="Fe6-bo-4Qq">
                         <barButtonItem key="rightBarButtonItem" title="Grid" id="O7U-Qb-JFg">
@@ -82,6 +86,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="c0K-0e-P9g">
+                    <connections>
+                        <action selector="onSwipe:" destination="BYZ-38-t0r" id="b8n-xD-BZZ"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="162" y="396"/>
         </scene>

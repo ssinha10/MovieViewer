@@ -140,6 +140,12 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
             self.refreshControl.endRefreshing()
         })
     }
+    
+    @IBAction func onSwipe(sender: AnyObject) {
+        view.endEditing(true)
+    }
+    
+   
    
     /*
     // MARK: - Navigation
