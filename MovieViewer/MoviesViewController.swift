@@ -29,7 +29,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         super.viewDidLoad()
         tableView.dataSource = self
-        tableView.delegate = self
+        tableView.delegate = self 
    //    filteredData = data
         
         refreshControl = UIRefreshControl()
