@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DBB72BE1C4A9E54001D25EF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBB72BD1C4A9E54001D25EF /* SecondViewController.swift */; };
+		0DBB72C21C4AA0D0001D25EF /* colorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBB72C11C4AA0D0001D25EF /* colorCell.swift */; };
 		0DCC38FB1C3E51A7009DA237 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCC38FA1C3E51A7009DA237 /* AppDelegate.swift */; };
 		0DCC39001C3E51A7009DA237 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DCC38FE1C3E51A7009DA237 /* Main.storyboard */; };
 		0DCC39021C3E51A7009DA237 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DCC39011C3E51A7009DA237 /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		07B5D8E8A63B798AF16FFF10 /* Pods-MovieViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieViewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieViewer/Pods-MovieViewer.debug.xcconfig"; sourceTree = "<group>"; };
+		0DBB72BD1C4A9E54001D25EF /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		0DBB72C11C4AA0D0001D25EF /* colorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = colorCell.swift; sourceTree = "<group>"; };
 		0DCC38F71C3E51A7009DA237 /* MovieViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DCC38FA1C3E51A7009DA237 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DCC38FF1C3E51A7009DA237 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				0DCC390F1C3E7F99009DA237 /* MovieCell.swift */,
+				0DBB72C11C4AA0D0001D25EF /* colorCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -86,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				0DCC390C1C3E5260009DA237 /* MoviesViewController.swift */,
+				0DBB72BD1C4A9E54001D25EF /* SecondViewController.swift */,
 			);
 			name = "view controllers";
 			sourceTree = "<group>";
@@ -229,6 +235,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DBB72BE1C4A9E54001D25EF /* SecondViewController.swift in Sources */,
+				0DBB72C21C4AA0D0001D25EF /* colorCell.swift in Sources */,
 				0DCC38FB1C3E51A7009DA237 /* AppDelegate.swift in Sources */,
 				0DCC390D1C3E5260009DA237 /* MoviesViewController.swift in Sources */,
 				0DCC39101C3E7F99009DA237 /* MovieCell.swift in Sources */,
