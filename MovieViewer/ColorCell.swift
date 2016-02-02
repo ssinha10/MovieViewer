@@ -1,14 +1,16 @@
 //
-//  colorCell.swift
+//  ColorCell.swift
 //  MovieViewer
 //
-//  Created by Suraj Sinha on 1/16/16.
+//  Created by Suraj Sinha on 1/26/16.
 //  Copyright © 2016 KingSoy. All rights reserved.
 //
 
 import UIKit
 
-class colorCell: UICollectionViewCell {
+class ColorCell: UICollectionViewCell {
+    
     @IBOutlet weak var colorLabel: UILabel!
+    
     
 }

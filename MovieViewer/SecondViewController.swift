@@ -22,7 +22,10 @@ class SecondViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        
+       
         super.viewDidLoad()
+       //  collectionView.dataSource = self
 
         // Do any additional setup after loading the view.
     }
